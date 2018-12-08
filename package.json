@@ -1,0 +1,32 @@
+{
+  "name": "electron-osx-prompt",
+  "version": "1.4.0",
+  "description": "Electron macOS-style prompts.",
+  "main": "index.js",
+  "author": "peterfreeman",
+  "keywords": [
+    "electron",
+    "osx",
+    "os x",
+    "mac",
+    "macos",
+    "prompt",
+    "dialog",
+    "window",
+    "input",
+    "enter"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "release": "npm version patch && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterfreeman/electron-osx-prompt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/peterfreeman/electron-osx-prompt/issues"
+  },
+  "homepage": "https://github.com/peterfreeman/electron-osx-prompt#readme",
+  "dependencies": {}
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./photon.css">
+    <link rel="stylesheet" href="./prompt.css">
+    <script src="./prompt.js"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="prompt-content">
+        <div class="image-container">
+            <img id="prompt-img">
+        </div>
+        <div class="form-control-input-container">
+            <div id="label" class="form-control-label"></div>
+            <input type="text" id="input" class="form-control-text" onkeypress="enter(event)" required>
+        </div>
+    </div>
+    <div class="preferences-form-actions">
+        <button type="submit" class="btn btn-default" onclick="Cancel()">Cancel</button>
+        <button type="submit" class="btn btn-primary" onclick="Ok()">OK</button>
+    </div>
+</body>
+
+</html>
