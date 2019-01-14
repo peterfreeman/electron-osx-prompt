@@ -1,9 +1,9 @@
-# Electron OS X prompts
+# electron-osx-prompts
 
 Electron macOS-style prompts. Intended for use on a mac.\
 Behaves like a modal that blocks other interaction.
 
-<img src="https://i.imgur.com/l7rcbrE.png" width="500px">
+<img src="https://i.imgur.com/l7rcbrE.png">
 
 ## Install
 
@@ -35,10 +35,13 @@ You can also provide a PNG or JPEG image for the prompt icon. It's size should b
 
 ### userPrompt([label, placeholder, icon])
 
-- label: `string`. Default: `"Please enter a value"`.
-- placeholder: `string`. Default: `""`.
-- icon: `string`. Default: Electron's standard icon.
-- returns a Promise with the user input. Clicking `Cancel` will return `null`.
+| Parameter |   Type  | Description | Default  |
+|--------------|-------|------------------------------------------------|---------|
+| `label` | `string` | The label text of the input field. | `'Please enter a value'` |
+| `placeholder`    | `string`  | The placeholder text inside the input field.   | `''` |
+| `icon`    | `string`  | Path to your custom (app) icon.   | Electron's default icon. |
+
+Returns a Promise with the user input. Clicking `Cancel` will return `null`.
 
 ## Licence
 
