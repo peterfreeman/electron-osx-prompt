@@ -6,7 +6,7 @@ const ipcMain = electron.ipcMain || electron.remote.ipcMain;
 const url = require('url');
 const path = require('path');
 
-function InputPrompt (_label = 'Please enter a value', _placeholder = '', _icon = './icon.png') {
+function InputPrompt (_label = 'Please enter a value', _placeholder = '', _icon = './icon.png', _masked = false) {
   return new Promise((resolve, reject) => {
 
     if (process.platform !== 'darwin') {
@@ -44,7 +44,8 @@ function InputPrompt (_label = 'Please enter a value', _placeholder = '', _icon 
     let options = {
       label: _label.toString(),
       placeholder: _placeholder.toString(),
-      icon: _icon.toString()
+      icon: _icon.toString(),
+      masked: _masked
     };
 
     console.log(options.icon);
