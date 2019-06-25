@@ -9,8 +9,8 @@ const path = require('path');
 function InputPrompt (_label = 'Please enter a value', _placeholder = '', _icon = './icon.png', _masked = false) {
   return new Promise((resolve, reject) => {
 
-    if (process.platform !== 'darwin') {
-      let err = 'electron-osx-prompt is intended for use on macOS.';
+    if (process.platform !== 'darwin' || process.platform !== 'win32') {
+      let err = 'electron-osx-prompt is intended for use on macOS or Windows.';
       console.warn(err);
     }
 
@@ -47,8 +47,6 @@ function InputPrompt (_label = 'Please enter a value', _placeholder = '', _icon 
       icon: _icon.toString(),
       masked: _masked
     };
-
-    console.log(options.icon);
 
     promptWindow.webContents.on('did-finish-load', () => {
       promptWindow.webContents.send('electron-osx-prompt-settings', options);
