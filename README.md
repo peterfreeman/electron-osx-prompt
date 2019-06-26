@@ -33,13 +33,14 @@ userPrompt('Label text', 'Placeholder text', icon)
 You can change the label text and the textbox placeholder text.\
 You can also provide a PNG or JPEG image for the prompt icon. It's size should be about 60 x 60 px.
 
-### userPrompt([label, placeholder, icon])
+### userPrompt([label, placeholder, icon, masked])
 
 | Parameter |   Type  | Description | Default  |
 |--------------|-------|------------------------------------------------|---------|
 | `label` | `string` | The label text of the input field. | `'Please enter a value'` |
 | `placeholder`    | `string`  | The placeholder text inside the input field.   | `''` |
 | `icon`    | `string`  | Path to your custom (app) icon.   | Electron's default icon. |
+| `masked`    | `boolean`  | Set the input type to 'password'.   | `false` |
 
 Returns a Promise with the user input. Clicking `Cancel` will return `null`.
 
