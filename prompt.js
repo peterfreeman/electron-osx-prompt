@@ -6,6 +6,7 @@ const path = require('path');
 ipcRenderer.on('electron-osx-prompt-settings', (event, options) => {
     document.getElementById('label').innerHTML = options.label;
     document.getElementById('input').placeholder = options.placeholder;
+    document.getElementById('input').type = options.masked ? 'password' : 'text';
     document.getElementById('prompt-img').src = options.icon;
 });
 
